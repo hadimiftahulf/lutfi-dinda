@@ -306,29 +306,6 @@ const Index: NextPage = () => {
                     </blockquote>
                   </div>
                 </div>
-                <div className="col-md-6 item">
-                  <div className="de_testi opt-2">
-                    <blockquote>
-                      <p>
-                        Hope you will have a long and happy life together.
-                        Always treat each other better than you want to be
-                        treated.
-                      </p>
-                      <div className="de_testi_by">Michael, Friend</div>
-                    </blockquote>
-                  </div>
-                </div>
-                <div className="col-md-6 item">
-                  <div className="de_testi opt-2">
-                    <blockquote>
-                      <p>
-                        I wish you a wonderful life together as you head down
-                        the road to married happiness. So happy for you!
-                      </p>
-                      <div className="de_testi_by">Jenny, Friend</div>
-                    </blockquote>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -348,7 +325,6 @@ const Index: NextPage = () => {
           </div>
         </div>
       </footer>
-      <Script src="/js/jquery.min.js" strategy="beforeInteractive"></Script>
       <Script src="/js/bootstrap.min.js"></Script>
       <Script src="/js/jquery.isotope.min.js"></Script>
       <Script src="/js/easing.js"></Script>
@@ -364,6 +340,7 @@ const Index: NextPage = () => {
       <Script src="/js/countdown-custom.js"></Script>
       <Script src="/js/animsition.min.js"></Script>
       <Script src="/js/designesia.js"></Script>
+      <Script src="/js/jquery.min.js" strategy="beforeInteractive"></Script>
     </div>
   );
 };

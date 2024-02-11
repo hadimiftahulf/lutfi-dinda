@@ -1231,30 +1231,30 @@
           jQuery(this).addClass("animsition-link");
         }
       });
-      // $(".animsition").animsition({
-      // 	inClass: opt_page_trans_in,
-      // 	outClass: opt_page_trans_out,
-      // 	inDuration: 1500,
-      // 	outDuration: 800,
-      // 	linkElement: '.animsition-link',
-      // 	// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-      // 	loading: true,
-      // 	loadingParentElement: 'body', //animsition wrapper element
-      // 	loadingClass: 'animsition-loading',
-      // 	loadingInner: '', // e.g '<img src="loading.svg" />'
-      // 	timeout: false,
-      // 	timeoutCountdown: 5000,
-      // 	onLoadEvent: true,
-      // 	browser: ['animation-duration', '-webkit-animation-duration'],
-      // 	// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-      // 	// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-      // 	overlay: false,
-      // 	overlayClass: 'animsition-overlay-slide',
-      // 	overlayParentElement: 'body',
-      // 	transition: function(url) {
-      // 		window.location.href = url;
-      // 	}
-      // });
+      $(".animsition").animsition({
+        inClass: opt_page_trans_in,
+        outClass: opt_page_trans_out,
+        inDuration: 1500,
+        outDuration: 800,
+        linkElement: ".animsition-link",
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: "body", //animsition wrapper element
+        loadingClass: "animsition-loading",
+        loadingInner: "", // e.g '<img src="loading.svg" />'
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: ["animation-duration", "-webkit-animation-duration"],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay: false,
+        overlayClass: "animsition-overlay-slide",
+        overlayParentElement: "body",
+        transition: function (url) {
+          window.location.href = url;
+        },
+      });
     }
     // --------------------------------------------------
     // blog list hover
@@ -1393,12 +1393,12 @@
       filter_gallery();
       custom_bg();
       menu_arrow();
-      load_owl();
+      // load_owl();
       custom_elements();
       init();
       centerY();
       // hide preloader after loaded
-      jQuery("#preloader").delay(500).fadeOut(500);
+      // jQuery('#preloader').delay(500).fadeOut(500);
       // one page navigation
       /**
        * This part causes smooth scrolling using scrollto.js
