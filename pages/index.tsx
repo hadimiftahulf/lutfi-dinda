@@ -87,7 +87,7 @@ const Index: NextPage = () => {
                 <div id="logo">
                   <a href="index.html">
                     <h2>
-                      Dinda<span>&amp;</span>Lutfi
+                      Ber<span>&amp;</span>Lutfi
                     </h2>
                   </a>
                 </div>
@@ -159,7 +159,7 @@ const Index: NextPage = () => {
                     <div className="row">
                       <div className="spacer-single" />
                       <div className="col-md-5 text-right text-center-sm relative">
-                        <h2 className="name">Dinda</h2>
+                        <h2 className="name">Ber</h2>
                       </div>
                       <div className="col-md-2 text-center">
                         <span className="deco-big" data-scroll-speed={2}>
