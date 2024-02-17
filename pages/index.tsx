@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { useSearchParams } from "next/navigation";
 
 const galery = [
   {
@@ -71,6 +72,9 @@ const galery = [
 ];
 
 const Index: NextPage = () => {
+  const searchParams = useSearchParams();
+  const search = searchParams.get("kepada");
+  console.log(search);
   return (
     <>
       <div id="wrapper">
@@ -115,6 +119,8 @@ const Index: NextPage = () => {
                   <h2 className="deco id-color">
                     <span>Turut Mengundang anda</span>
                   </h2>
+                  <br />
+                  <h2>{search}</h2>
                   <h2 data-wow-delay=".2s">Sabtu, 02 Maret 2024</h2>
                 </div>
                 <div className="spacer-double" />
@@ -430,9 +436,9 @@ const Index: NextPage = () => {
                       <li className="active" data-link="#section-services-tab">
                         <span>The Wedding</span>
                       </li>
-                      <li data-link="#section-services-tab">
+                      {/* <li data-link="#section-services-tab">
                         <span>Our Best Friends</span>
-                      </li>
+                      </li> */}
                     </ul>
                     <div className="de_tab_content">
                       <div id="tab1" className="tab_single_content">
@@ -497,8 +503,6 @@ const Index: NextPage = () => {
       <Script src="/js/enquire.min.js"></Script>
       <Script src="/js/jquery.stellar.min.js"></Script>
       <Script src="/js/jquery.plugin.js"></Script>
-      <Script src="/js/jquery.countdown.js"></Script>
-      {/* <Script src="/js/countdown-custom.js"></Script> */}
       <Script src="/js/animsition.min.js"></Script>
       <Script src="/js/designesia.js"></Script>
     </>
