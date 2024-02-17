@@ -1201,8 +1201,8 @@
         var x = $(this);
         var picheight = parseInt(x.find(".center-y").css("height"));
         var mid = (dh - picheight) / 2;
-        x.css("height", dh);
-        x.find(".center-y").css("margin-top", mid);
+        // x.css("height", dh);
+        // x.find(".center-y").css("margin-top", mid);
       });
       var ms = window.matchMedia("(max-width: 992px)");
       if (ms.matches) {

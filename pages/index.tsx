@@ -108,7 +108,7 @@ const Index: NextPage = () => {
           <div
             id="popup-box"
             className="full-height"
-            style={{ position: "absolute", height: "531px", display: "none" }}
+            // style={{ position: "absolute", height: "531px", display: "none" }}
           >
             <span className="btn-close">
               <i className="icon_close" />
