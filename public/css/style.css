@@ -6706,7 +6706,7 @@ img {
   .custom-owl-slider .item img {
     width: 200% !important;
     height: auto !important;
-    margin-left: -60%;
+    margin-left: -50%;
   }
   .custom-owl-slider .item {
     overflow: hidden;
