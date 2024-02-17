@@ -380,7 +380,7 @@
       touchDrag: true,
       transitionStyle: "fade",
     });
-    jQuery("#custom-owl-slider").owlCarousel({
+    jQuery(".custom-owl-slider").owlCarousel({
       items: 1,
       singleItem: true,
       navigation: false,
@@ -411,7 +411,7 @@
       });
     });
     // custom navigation for slider
-    var ows = $("#custom-owl-slider");
+    // var ows = $('.custom-owl-slider');
     var arr = $(".owl-slider-nav");
     var doc_height = $(window).innerHeight();
     arr.css("top", doc_height / 2 - 25);
@@ -1224,38 +1224,38 @@
       }
     }
 
-    if (opt_page_trans == 1) {
-      // jQuery('body').addClass('animsition');
-      jQuery("header a").each(function () {
-        if (this.getAttribute("href").charAt(0) !== "#") {
-          jQuery(this).addClass("animsition-link");
-        }
-      });
-      $(".animsition").animsition({
-        inClass: opt_page_trans_in,
-        outClass: opt_page_trans_out,
-        inDuration: 1500,
-        outDuration: 800,
-        linkElement: ".animsition-link",
-        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-        loading: true,
-        loadingParentElement: "body", //animsition wrapper element
-        loadingClass: "animsition-loading",
-        loadingInner: "", // e.g '<img src="loading.svg" />'
-        timeout: false,
-        timeoutCountdown: 5000,
-        onLoadEvent: true,
-        browser: ["animation-duration", "-webkit-animation-duration"],
-        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-        overlay: false,
-        overlayClass: "animsition-overlay-slide",
-        overlayParentElement: "body",
-        transition: function (url) {
-          window.location.href = url;
-        },
-      });
-    }
+    // if (opt_page_trans == 1) {
+    // 	jQuery('body').addClass('animsition');
+    // 	jQuery('header a').each(function() {
+    // 		if (this.getAttribute("href").charAt(0) !== "#") {
+    // 			jQuery(this).addClass('animsition-link');
+    // 		}
+    // 	});
+    // 	$(".animsition").animsition({
+    // 		inClass: opt_page_trans_in,
+    // 		outClass: opt_page_trans_out,
+    // 		inDuration: 1500,
+    // 		outDuration: 800,
+    // 		linkElement: '.animsition-link',
+    // 		// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    // 		loading: true,
+    // 		loadingParentElement: 'body', //animsition wrapper element
+    // 		loadingClass: 'animsition-loading',
+    // 		loadingInner: '', // e.g '<img src="loading.svg" />'
+    // 		timeout: false,
+    // 		timeoutCountdown: 5000,
+    // 		onLoadEvent: true,
+    // 		browser: ['animation-duration', '-webkit-animation-duration'],
+    // 		// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // 		// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    // 		overlay: false,
+    // 		overlayClass: 'animsition-overlay-slide',
+    // 		overlayParentElement: 'body',
+    // 		transition: function(url) {
+    // 			window.location.href = url;
+    // 		}
+    // 	});
+    // }
     // --------------------------------------------------
     // blog list hover
     // --------------------------------------------------

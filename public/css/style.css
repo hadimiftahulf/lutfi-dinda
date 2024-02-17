@@ -5025,7 +5025,7 @@ section.no-padding {
 .owl-arrow .next:before {
   font-family: "FontAwesome";
   content: "\f177";
-  color: #2;
+  color: #555;
   padding: 20px;
   font-size: 32px;
   display: block;
@@ -5689,7 +5689,7 @@ a.read_more i {
 .owl-custom-nav .btn-next:hover:before {
   cursor: pointer;
 }
-#custom-owl-slider {
+.custom-owl-slider {
   display: block;
   overflow: hidden;
   width: 100%;
@@ -5699,7 +5699,7 @@ a.read_more i {
   z-index: -1;
   background: #fff;
 }
-#custom-owl-slider .items {
+.custom-owl-slider .items {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -5707,7 +5707,7 @@ a.read_more i {
   visibility: inherit;
   opacity: 1;
 }
-#custom-owl-slider .item img {
+.custom-owl-slider .item img {
   display: block;
   width: 100%;
   height: 100%;
@@ -6321,11 +6321,11 @@ img {
   }
 }
 @media only screen and (max-width: 992px) {
-  #custom-owl-slider .item img {
+  .custom-owl-slider .item img {
     width: 100% !important;
     height: auto !important;
   }
-  #custom-owl-slider .item {
+  .custom-owl-slider .item {
     overflow: hidden;
   }
 
@@ -6703,12 +6703,12 @@ img {
 	/* -------------------------------------------------- */
 
 @media only screen and (max-width: 767px) {
-  #custom-owl-slider .item img {
+  .custom-owl-slider .item img {
     width: 200% !important;
     height: auto !important;
     margin-left: -60%;
   }
-  #custom-owl-slider .item {
+  .custom-owl-slider .item {
     overflow: hidden;
   }
 
