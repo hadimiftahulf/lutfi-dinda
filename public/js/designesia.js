@@ -1178,7 +1178,7 @@
     "use strict";
     $("body").show();
     $("body").addClass("de_light");
-    // new WOW().init();
+    new WOW().init();
     de_settings();
     load_magnificPopup();
     center_xy();
@@ -1397,7 +1397,6 @@
       custom_elements();
       init();
       centerY();
-      $("#").fadeOut(1000);
       // hide preloader after loaded
       // jQuery('#preloader').delay(500).fadeOut(500);
       // one page navigation
