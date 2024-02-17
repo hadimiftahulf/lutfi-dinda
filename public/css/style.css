@@ -6704,14 +6704,32 @@ img {
 
 @media only screen and (max-width: 767px) {
   .custom-owl-slider .item img {
-    width: 200% !important;
+    width: 100% !important;
     height: auto !important;
-    margin-left: -50%;
   }
   .custom-owl-slider .item {
     overflow: hidden;
   }
 
+  h2.name {
+    font-family: "Mr De Haviland";
+    color: #fff;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: normal;
+  }
+
+  .mobile-saction {
+    padding-top: 40px !important;
+  }
+
+  .deco-big {
+    display: block;
+    font-size: 90px;
+    font-family: "Allura";
+    margin-top: 20px;
+    font-weight: normal;
+  }
   header div#logo h2 {
     font-size: 24px;
     margin-top: 24px;

@@ -201,7 +201,7 @@ const Index: NextPage = () => {
           </section>
           {/* section close */}
           {/* section begin */}
-          <section id="section-couple" className="no-top">
+          <section id="section-couple" className="no-top mobile-saction">
             <div className="container relative mt-60 z-index">
               <div className="row">
                 <div className="col-md-5 col-md-offset-1 text-center">
