@@ -108,7 +108,7 @@ const Index: NextPage = () => {
           <div
             id="popup-box"
             className="full-height"
-            style={{ position: "absolute", height: "531px" }}
+            style={{ position: "absolute", height: "531px", display: "none" }}
           >
             <span className="btn-close">
               <i className="icon_close" />
@@ -148,10 +148,6 @@ const Index: NextPage = () => {
             className="full-height relative z1 owl-slide-wrapper no-top no-bottom text-light"
             data-stellar-background-ratio=".2"
           >
-            <div className="owl-slider-nav">
-              <div className="next" />
-              <div className="prev" />
-            </div>
             <div className="center-y fadeScroll relative" data-scroll-speed={4}>
               <div className="container">
                 <div className="row">
