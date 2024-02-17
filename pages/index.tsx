@@ -7,6 +7,7 @@ import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 const galery = [
   {
@@ -74,7 +75,13 @@ const galery = [
 const Index: NextPage = () => {
   const searchParams = useSearchParams();
   const search = searchParams.get("kepada");
-  console.log(search);
+  useEffect(() => {
+    const elementRsv = document.getElementById("rsvp-frist");
+    console.log(elementRsv);
+    if (elementRsv) {
+      elementRsv.click();
+    }
+  }, []);
   return (
     <>
       <div id="wrapper">
@@ -95,7 +102,9 @@ const Index: NextPage = () => {
                 {/* small button begin */}
                 <span id="menu-btn" />
                 {/* small button close */}
-                <span className="btn-rsvp">RSVP</span>
+                <span id="rsvp-frist" className="btn-rsvp">
+                  RSVP
+                </span>
               </div>
               {/* mainmenu close */}
             </div>
