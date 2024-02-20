@@ -168,7 +168,7 @@ const Index: NextPage = () => {
                         </span>
                       </div>
                       <div className="col-md-5 text-left text-center-sm relative">
-                        <h2 className="name">Lutfi</h2>
+                        <h2 className="name">Upil</h2>
                       </div>
                     </div>
                   </div>
