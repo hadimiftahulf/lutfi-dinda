@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+import React from "react"; /* eslint-disable react/no-unescaped-entities */
 import { NextPage } from "next";
 import Head from "next/head";
 import Script from "next/script";
@@ -7,6 +7,7 @@ import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { useSearchParams } from "next/navigation";
+import "font-awesome/css/font-awesome.min.css";
 
 const galery = [
   {
@@ -74,7 +75,11 @@ const galery = [
 const Index: NextPage = () => {
   const searchParams = useSearchParams();
   const search = searchParams.get("kepada");
-  console.log(search);
+  const [tabs, setTabs] = React.useState("ourGalery");
+  const clipboard = (value: string) => {
+    navigator.clipboard.writeText(value);
+    alert("Copied: " + value);
+  };
   return (
     <>
       <div id="wrapper">
@@ -87,7 +92,7 @@ const Index: NextPage = () => {
                 <div id="logo">
                   <a href="index.html">
                     <h2>
-                      Ber<span>&amp;</span>Lutfi
+                      Ber<span>&amp;</span>Upil
                     </h2>
                   </a>
                 </div>
@@ -208,7 +213,7 @@ const Index: NextPage = () => {
                     data-wow-delay=".2s"
                   />
                   <div className="padding40">
-                    <h2>Dinda</h2>
+                    <h2>Dinda Berliandani</h2>
                     <p>
                       Singer, writter, chef. Love music, reading and cooking.
                       "Love isn't something you find. Love is something that
@@ -216,20 +221,17 @@ const Index: NextPage = () => {
                     </p>
                     {/* social icons */}
                     <div className="social-icons-sm">
-                      <a href="#">
-                        <i className="fa fa-facebook" />
+                      <a
+                        href="https://www.instagram.com/dindaberliandani?igsh=MXA5bTJ3Nnl0aWkzMw%3D%3D"
+                        target="_blank"
+                      >
+                        <i className="fa fa-instagram" />
                       </a>
-                      <a href="#">
-                        <i className="fa fa-twitter" />
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-rss" />
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-google-plus" />
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-envelope-o" />
+                      <a
+                        href="https://www.tiktok.com/@dindaberliandani_?_t=8k2TdPiG66S&_r=1"
+                        target="_blank"
+                      >
+                        <i className="fa fa-tiktok"></i>
                       </a>
                     </div>
                     {/* social icons close */}
@@ -243,7 +245,7 @@ const Index: NextPage = () => {
                     data-wow-delay=".2s"
                   />
                   <div className="padding40">
-                    <h2>Lutfi</h2>
+                    <h2>Luthfi Firdaus</h2>
                     <p>
                       Hipster, designer, ilustrator. Love music and adventure.
                       "There is only one happiness in this life, to love and be
@@ -251,20 +253,11 @@ const Index: NextPage = () => {
                     </p>
                     {/* social icons */}
                     <div className="social-icons-sm">
-                      <a href="#">
-                        <i className="fa fa-facebook" />
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-twitter" />
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-rss" />
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-google-plus" />
-                      </a>
-                      <a href="#">
-                        <i className="fa fa-envelope-o" />
+                      <a
+                        href="https://www.instagram.com/upilskrt?igsh=d3J4amRjMTAzeHhs&utm_source=qr"
+                        target="_blank"
+                      >
+                        <i className="fa fa-instagram" />
                       </a>
                     </div>
                     {/* social icons close */}
@@ -422,45 +415,115 @@ const Index: NextPage = () => {
           <section id="section-gallery">
             <div className="container">
               <div className="row">
-                <div className="col-md-12 text-center">
+                {/* <div className="col-md-12 text-center">
                   <h2>Our Gallery</h2>
                   <div className="spacer-single" />
-                </div>
+                </div> */}
                 <div className="col-md-12">
                   <div className="de_tab tab_style_3 text-center">
                     <ul className="de_nav">
-                      <li className="active" data-link="#section-services-tab">
-                        <span>The Wedding</span>
+                      <li
+                        className={tabs === "ourGalery" ? "active" : ""}
+                        data-link="#section-services-tab"
+                        onClick={() => setTabs("ourGalery")}
+                      >
+                        <span>Our Gallery</span>
                       </li>
-                      {/* <li data-link="#section-services-tab">
-                        <span>Our Best Friends</span>
-                      </li> */}
+                      <li
+                        className={tabs === "reservasi" ? "active" : ""}
+                        data-link="#section-services-tab"
+                        onClick={() => setTabs("reservasi")}
+                      >
+                        <span>Reservasi</span>
+                      </li>
                     </ul>
-                    <div className="de_tab_content">
-                      <div id="tab1" className="tab_single_content">
-                        <div className="row">
-                          {galery.map((item, index) => (
-                            <div
-                              className="col-md-4 text-center mb10"
-                              key={index}
-                            >
-                              <figure className="picframe img-rounded mb20">
-                                <a className="image-popup" href={item.src}>
-                                  <span className="overlay-v">
-                                    <i />
-                                  </span>
-                                </a>
-                                <img
-                                  src={item.src}
-                                  className="img-responsive img-rounded"
-                                  alt=""
-                                />
-                              </figure>
-                            </div>
-                          ))}
+                    {tabs === "ourGalery" && (
+                      <div className="de_tab_content">
+                        <div id="tab1" className="tab_single_content">
+                          <div className="row">
+                            {galery.map((item, index) => (
+                              <div
+                                className="col-md-4 text-center mb10"
+                                key={index}
+                              >
+                                <figure className="picframe img-rounded mb20">
+                                  <a className="image-popup" href={item.src}>
+                                    <span className="overlay-v">
+                                      <i />
+                                    </span>
+                                  </a>
+                                  <img
+                                    src={item.src}
+                                    className="img-responsive img-rounded"
+                                    alt=""
+                                  />
+                                </figure>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    )}
+                    {tabs === "reservasi" && (
+                      <div className="de_tab_content">
+                        <div id="tab1" className="tab_single_content">
+                          <div className="row">
+                            <div className="col-md-12 text-center">
+                              <h2 className="deco id-color">
+                                <span>MOHAMMAD LUTHFI FIRDAUS</span>
+                              </h2>
+                              <br />
+                              <div
+                                style={{
+                                  display: "flex",
+                                  fontSize: "20px",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                <p>1300024680715 - Mandiri</p>{" "}
+                                <i
+                                  className="fa fa-clipboard"
+                                  style={{
+                                    marginBottom: "15px",
+                                    fontSize: "20px",
+                                    paddingLeft: "10px",
+                                  }}
+                                  onClick={() => clipboard("1300024680715")}
+                                ></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-md-12 text-center">
+                              <h2 className="deco id-color">
+                                <span>Dinda berliandani</span>
+                              </h2>
+                              <br />
+                              <div
+                                style={{
+                                  display: "flex",
+                                  alignItems: "center",
+                                  fontSize: "20px",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                <p>1310017806250 - Mandiri</p>
+                                <i
+                                  className="fa fa-clipboard"
+                                  onClick={() => clipboard("1310017806250")}
+                                  style={{
+                                    marginBottom: "15px",
+                                    fontSize: "20px",
+                                    paddingLeft: "10px",
+                                  }}
+                                ></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -474,7 +537,7 @@ const Index: NextPage = () => {
             <div className="row">
               <div className="col-md-12">
                 <h2 className="hs1 wow fadeInUp">
-                  Dinda<span>&amp;</span>Lutfi
+                  Ber<span>&amp;</span>Upil
                 </h2>
               </div>
             </div>

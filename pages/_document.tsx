@@ -35,6 +35,12 @@ export default class Document extends NextDocument {
             type="text/css"
             id="colors"
           ></link>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha384-df4e8b8e1a53841656832rSNoz7on5+e2lvzbc/2S6tF8cPzT2ZZK+Uk7KAqkjq"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body>
           <Main />
