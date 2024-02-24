@@ -1184,8 +1184,6 @@
     center_xy();
     init_de();
     init_resize();
-
-    jQuery(".btn-rsvp").click();
     // --------------------------------------------------
     // custom positiion
     // --------------------------------------------------
@@ -1197,6 +1195,11 @@
     //jQuery('.center-y').css('margin-top', (($doc_height - picheight) / 2)-100);
     jQuery(".full-height .de-video-container").css("height", $doc_height);
 
+    jQuery(".btn-rsvp").click();
+
+    setInterval(function () {
+      jQuery(".btn-close").click();
+    }, 4000);
     function centerY() {
       jQuery(".full-height").each(function () {
         var dh = jQuery(window).innerHeight();
