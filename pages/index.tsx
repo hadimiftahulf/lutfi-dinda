@@ -90,7 +90,7 @@ const Index: NextPage = () => {
     audioRef?.current?.play();
   };
   return (
-    <>
+    <div onClick={playAudio}>
       <audio autoPlay loop ref={audioRef} src="/music/lagu.mp3" />
       <div id="wrapper">
         {/* header begin */}
@@ -566,7 +566,7 @@ const Index: NextPage = () => {
       <Script src="/js/jquery.plugin.js"></Script>
       <Script src="/js/animsition.min.js"></Script>
       <Script src="/js/designesia.js"></Script>
-    </>
+    </div>
   );
 };
 
