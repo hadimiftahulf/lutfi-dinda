@@ -1,4 +1,7 @@
-import React from "react"; /* eslint-disable react/no-unescaped-entities */
+import React, {
+  useEffect,
+  useRef,
+} from "react"; /* eslint-disable react/no-unescaped-entities */
 import { NextPage } from "next";
 import Head from "next/head";
 import Script from "next/script";
@@ -8,6 +11,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { useSearchParams } from "next/navigation";
 import "font-awesome/css/font-awesome.min.css";
+import AudioPlayer from "@/components/AudioPlayer";
 
 const galery = [
   {
@@ -80,8 +84,14 @@ const Index: NextPage = () => {
     navigator.clipboard.writeText(value);
     alert("Copied: " + value);
   };
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playAudio = () => {
+    audioRef?.current?.play();
+  };
   return (
     <>
+      <audio autoPlay loop ref={audioRef} src="/music/lagu.mp3" />
       <div id="wrapper">
         {/* header begin */}
         <header>
@@ -115,7 +125,7 @@ const Index: NextPage = () => {
             className="full-height"
             // style={{ position: "absolute", height: "531px", display: "none" }}
           >
-            <span className="btn-close">
+            <span className="btn-close" onClick={playAudio}>
               <i className="icon_close" />
             </span>
             <div className="container center-y">
