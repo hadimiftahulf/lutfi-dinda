@@ -214,7 +214,7 @@ const Index: NextPage = () => {
                   />
                   <div className="padding40">
                     <h2>Dinda Berliandani</h2>
-                    <p>etap bermimpi setinggi langit walaupun kurang tidur</p>
+                    <p>Tetap bermimpi setinggi langit walaupun kurang tidur</p>
                     {/* social icons */}
                     <div className="social-icons-sm">
                       <a
