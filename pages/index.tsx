@@ -214,11 +214,7 @@ const Index: NextPage = () => {
                   />
                   <div className="padding40">
                     <h2>Dinda Berliandani</h2>
-                    <p>
-                      Singer, writter, chef. Love music, reading and cooking.
-                      "Love isn't something you find. Love is something that
-                      finds you."
-                    </p>
+                    <p>etap bermimpi setinggi langit walaupun kurang tidur</p>
                     {/* social icons */}
                     <div className="social-icons-sm">
                       <a
@@ -246,11 +242,7 @@ const Index: NextPage = () => {
                   />
                   <div className="padding40">
                     <h2>Luthfi Firdaus</h2>
-                    <p>
-                      Hipster, designer, ilustrator. Love music and adventure.
-                      "There is only one happiness in this life, to love and be
-                      loved"
-                    </p>
+                    <p>Buah persik di pohon pisang cik sabatang</p>
                     {/* social icons */}
                     <div className="social-icons-sm">
                       <a
