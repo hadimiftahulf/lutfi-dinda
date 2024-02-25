@@ -91,7 +91,7 @@ const Index: NextPage = () => {
   };
   return (
     <div onClick={playAudio}>
-      <audio autoPlay loop ref={audioRef} src="/music/lagu.mp3" />
+      <audio autoPlay loop ref={audioRef} src="/music/lagu-prewed.mp3" />
       <div id="wrapper">
         {/* header begin */}
         <header>
@@ -224,7 +224,7 @@ const Index: NextPage = () => {
                   />
                   <div className="padding40">
                     <h2>Dinda Berliandani</h2>
-                    <p>Tetap bermimpi setinggi langit walaupun kurang tidur</p>
+                    <p>Putri Kedua Dari Bpk. Suhadi & ibu Yani Suryani S.E</p>
                     {/* social icons */}
                     <div className="social-icons-sm">
                       <a
@@ -252,7 +252,10 @@ const Index: NextPage = () => {
                   />
                   <div className="padding40">
                     <h2>Luthfi Firdaus</h2>
-                    <p>Buah persik di pohon pisang cik sabatang</p>
+                    <p>
+                      Putra dari Bpk. Odang Sulisman S.PD & Ibu ecin kuraesin
+                      (Almh) / Nia
+                    </p>
                     {/* social icons */}
                     <div className="social-icons-sm">
                       <a
@@ -286,13 +289,9 @@ const Index: NextPage = () => {
               <div className="row wow fadeInUp">
                 <div className="col-md-8 col-md-offset-2">
                   <blockquote className="very-big text-light wow fadeIn">
-                    Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia
-                    menciptakan pasangan-pasangan untukmu dari (jenis) dirimu
-                    sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan
-                    di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada
-                    yang demikian itu benar-benar terdapat tanda-tanda
-                    (kebesaran Allah) bagi kaum yang berpikir.
-                    <span>Ar-Rum : 21</span>
+                    Segala sesuatu Kami ciptakan berpasang-pasangan agar kamu
+                    mengingat (kebesaran Allah).
+                    <span>Az-Zariyat:49</span>
                   </blockquote>
                 </div>
               </div>
@@ -366,7 +365,7 @@ const Index: NextPage = () => {
           </section>
           {/* section close */}
           {/* section begin */}
-          <section
+          {/* <section
             id="section-guestbook"
             className="text-light"
             data-stellar-background-ratio=".2"
@@ -412,7 +411,7 @@ const Index: NextPage = () => {
                 </Carousel>
               </div>
             </div>
-          </section>
+          </section> */}
           {/* section close */}
           <section id="section-gallery">
             <div className="container">
